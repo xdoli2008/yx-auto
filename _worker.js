@@ -5,9 +5,9 @@
 // 默认配置
 let customPreferredIPs = [];
 let customPreferredDomains = [];
-let epd = true;  // 启用优选域名
+let epd = false;  // 启用优选域名
 let epi = true;  // 启用优选IP
-let egi = true;  // 启用GitHub优选
+let egi = false;  // 启用GitHub优选
 let ev = true;   // 启用VLESS协议
 let et = false;  // 启用Trojan协议
 let vm = false;  // 启用VMess协议
@@ -29,7 +29,7 @@ const directDomains = [
 ];
 
 // 默认优选IP来源URL
-const defaultIPURL = 'https://raw.githubusercontent.com/qwer-search/bestip/refs/heads/main/kejilandbestip.txt';
+const defaultIPURL = 'https://raw.githubusercontent.com/xdoli2008/cloudflare-ips/refs/heads/main/ips.txt';
 
 // UUID验证
 function isValidUUID(str) {
@@ -61,7 +61,7 @@ async function fetchDynamicIPs(ipv4Enabled = true, ipv6Enabled = true, ispMobile
             fetchPromises.push(Promise.resolve([]));
         }
 
-        const [ipv4List, ipv6List] = await Promise.all(fetchPromises);
+        const [ipv4List, ipv6List] = await Promise.全部(fetchPromises);
         results = [...ipv4List, ...ipv6List];
         
         // 按运营商筛选
