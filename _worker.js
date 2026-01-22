@@ -13,20 +13,18 @@ let et = false;  // 启用Trojan协议
 let vm = false;  // 启用VMess协议
 let scu = 'https://url.v1.mk/sub';  // 订阅转换地址
 
-// 默认优选域名列表
-const directDomains = [
-    { name: "cloudflare.182682.xyz", domain: "cloudflare.182682.xyz" },
-    { domain: "freeyx.cloudflare88.eu.org" },
-    { domain: "bestcf.top" },
-    { domain: "cdn.2020111.xyz" },
-    { domain: "cf.0sm.com" },
-    { domain: "cf.090227.xyz" },
-    { domain: "cf.zhetengsha.eu.org" },
-    { domain: "cfip.1323123.xyz" },
-    { domain: "cloudflare-ip.mofashi.ltd" },
-    { domain: "cf.877771.xyz" },
-    { domain: "xn--b6gac.eu.org" }
-];
+// 默认优选域名列表 
+// const directDomains = [
+//     { name: "cloudflare.182682.xyz", domain: "cloudflare.182682.xyz" },
+//     { domain: "freeyx.cloudflare88.eu.org" },
+//     { domain: "cf.zhetengsha.eu.org" },
+//     { domain: "cfip.1323123.xyz" },
+//     { domain: "cloudflare-ip.mofashi.ltd" },
+//     { domain: "cf.877771.xyz" },
+//     { domain: "xn--b6gac.eu.org" }
+// ];
+
+const directDomains = [];
 
 // 默认优选IP来源URL
 const defaultIPURL = 'https://raw.githubusercontent.com/xdoli2008/bestip/refs/heads/main/data/output/best.txt';
@@ -171,7 +169,7 @@ async function 请求优选API(urls, 默认端口 = '443', 超时时间 = 3000) 
                     return;
                 }
             } catch (e) {
-                console.error('Failed to decode response:', e);
+                console。error('Failed to decode response:', e);
                 return;
             }
             const lines = text.trim().split('\n').map(l => l.trim()).filter(l => l);
