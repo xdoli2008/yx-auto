@@ -29,7 +29,7 @@ const directDomains = [
 ];
 
 // 默认优选IP来源URL
-const defaultIPURL = 'https://raw.githubusercontent.com/xdoli2008/cloudflare-ips/refs/heads/main/ips.txt';
+const defaultIPURL = 'https://raw.githubusercontent.com/xdoli2008/bestip/refs/heads/main/data/output/best.txt';
 
 // UUID验证
 function isValidUUID(str) {
